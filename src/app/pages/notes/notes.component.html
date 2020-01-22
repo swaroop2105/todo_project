@@ -1,0 +1,43 @@
+
+<!-- {{notes | json}} -->
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+</head>
+
+<body>
+    <button (click)="goback()" class="btn btn-primary pos d-none d-lg-block">Back</button>
+<div class="container">
+    <div class="jumbotron jcolor text-center">
+        <h1 class="main_header">Tasks</h1>
+    </div>
+
+<div class="row">
+
+            
+            <div class="card col-lg-4 mb-4" style="width: 18rem;" *ngFor="let nt of notes "> 
+                
+                <div class="card-body card_style">
+
+                    <button (click)="delete(nt.title)" type="button" class="close close_color" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                      </button>
+                 
+
+                  <h5 class="card-title header_style1">Tittle : {{nt.title}}</h5>
+                  <hr>
+                  <h6 class="card-subtitle mb-2 header_style2">Note : {{nt.note}}</h6>
+                
+
+        </div>
+
+    </div>
+
+</div>
+</div>
+
+
+</body>
+
+    

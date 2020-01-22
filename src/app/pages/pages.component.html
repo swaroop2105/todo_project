@@ -1,0 +1,55 @@
+<body class="bodystyle">
+    
+
+<div class="container">
+    <div class="jumbotron text-center jcolor">
+        <h1 class="header_style">-TO#DO-</h1>
+    </div>
+    <div class="row">
+        <div class="col-lg-2">
+
+        </div>
+        <div class="col-lg-8">
+
+        
+    <form [formGroup]="submitNotes">
+        <!-- {{userform.value}} -->
+        <div class="form-group">
+            <label class="fontstyle">Title :</label>
+            <input type="text" class="form-control" [formControl]="title" maxlength="10" >
+
+        </div>
+
+        <div class="form-group">
+            <label class="fontstyle">Note :</label>
+            <!-- <input type="text" class="form-control" name="note" [formControl]="note" > -->
+            <textarea name="note" id="" cols="30" rows="5" class="form-control" type="text" [formControl]="note" ></textarea>
+
+        </div>
+        <p class="colorize" *ngIf="checker"> you cannot have empty fields !</p>
+        <button class="btn btn-success mr-3 button_spacing" (click)="submit()" >Add  </button>
+        <button class="btn btn-warning button_spacing" (click)="notescheck()">Check Notes</button>
+    </form>
+    
+</div>
+  
+</div>
+</div>
+
+
+</body>
+<!-- 
+<router-outlet></router-outlet>
+  <form action="">
+        <div class="card">
+            <div class="card-body">
+
+                <p>Enter the tittle</p>
+                <input type="text" #tittle>
+                <p>Note</p>
+                <textarea name="text" id="" cols="30" rows="10" #note></textarea>
+                <br>
+                <button (click)="textname(tittle.value,note.value)" class="btn btn-success mt-3">ADD</button>
+            </div>
+        </div>
+    </form> -->
